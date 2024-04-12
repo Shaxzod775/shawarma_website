@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.app-gallery-container {
+    background-image: url('../../assets/bg-gallery.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 900px;
+    width: 100%;
+}
+
+
+.app-gallery-content h1{
+    font-size: 50px;
+    font-weight: 800;
+    font-family: 'montserrat', sans-serif;
+    padding-top: 100px;
+    padding-bottom: 0px;
+    padding-right: 100px;
+    padding-left: 100px;
+    margin: 0px 75px 50px 75px;
+}
+
+.app-gallery-content span{
+    margin: 0;
+    padding: 0;
+    color: #ff4242;
+}
+
+
+.app-gallery-video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-direction: row;
+    padding-top: 25px;
+    padding-bottom: 0px;
+    padding-right: 100px;
+    padding-left: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.meal-video {
+    flex: 1 1 18%;
+    height: auto;
+    width: 20%;
+    max-width: 20%;
+    max-height: 20%;
+    background-size: contain;
+    overflow: hidden;
+    object-fit: contain;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1390px){
+    .app-gallery-container{
+        height: 750px;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .app-gallery-video-container{
+        padding: 25px 50px 0px 50px;
+    }
+}
+
+
+@media only screen and (max-width: 1000px){
+    .app-gallery-content h1 {
+        font-size: 40px;
+        padding: 100px 50px 0px 50px;
+        margin: 0px 50px 50px 50px;
+    }
+
+    .app-gallery-container {
+        height: 600px;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .app-gallery-video-container{
+        padding: 25px 25px 0px 25px;
+    }
+}
+
+
+@media only screen and (max-width: 750px){
+    .app-gallery-container {
+        height: 750px;
+    }
+
+    .app-gallery-video-container{
+        display: grid;
+        grid-template-columns: 175px 175px 175px;
+        grid-auto-rows: 225px;
+        justify-content: center;
+        align-items: center;
+        row-gap: 25px;
+    }
+
+    .meal-video {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 850px;
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .app-gallery-video-container{
+        padding: 0px 0px 0px 0px; 
+    }
+
+     .app-gallery-content h1  {
+        font-size: 35px;
+        padding: 100px 30px 0px 30px;
+        margin: 0px 30px 40px 30px;
+    }  
+}
+
+@media only screen and (max-width: 620px){
+    .app-gallery-container {
+        height: 750px;
+    }
+
+    .app-gallery-video-container{
+        display: grid;
+        grid-template-columns: 135px 135px 135px;
+        grid-auto-rows: 215px;
+        justify-content: center;
+        align-items: center;
+        row-gap: 25px;
+    }
+
+    .meal-video {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 850px;
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+
+
+@media only screen and (max-width: 500px){
+    .app-gallery-container {
+        height: 650px;
+    }
+
+    .app-gallery-video-container{
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        grid-auto-rows: 175px;
+        justify-content: center;
+        align-items: center;
+        row-gap: 25px;
+    }
+
+    .meal-video {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 850px;
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .app-gallery-content h1 {
+        font-size: 30px;
+        padding: 100px 10px 0px 10px;
+        margin: 0px 15px 40px 15px;
+    }
+
+}
+
+
+

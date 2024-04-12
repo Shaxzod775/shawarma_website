@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.app_about-container {
+    padding: 80px;
+    margin: 20px 75px 50px 75px;
+}
+
+.app_about-title  {
+    font-size: 50px;
+    font-weight: 800;
+    font-family:  'montserrat', sans-serif;
+}
+
+.app_about-title span {
+    margin: 0;
+    padding: 0;
+    color: #ff4242;
+}
+
+.app-about-info-container{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.app_about-info {
+    margin-top: 15px;
+    font-family: Sans-serif;
+    color: grey;
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+.app_about-info_p-container {
+    padding: 15px;
+}
+
+.app_about-img-container {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+}
+
+.app_about-img-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+.app_about-img-text img {
+    margin-left: 10px;
+    width: 300px;
+    height: 150px;
+}
+
+.app_about-img-title-info {
+    letter-spacing: 2px;
+    font-family: Roboto, Sans-serif;
+}
+
+
+.app_about-img-title-info-m {
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+
+@media only screen and (max-width: 1000px){
+    .app_about-container {
+        padding: 80px 50px 80px 50px;
+        margin: 20px 50px 50px 50px;
+}
+
+    .app_about-title {
+        font-size: 40px;
+    }
+
+    .app_about-info {
+        font-size: 13px;
+    }
+
+}
+
+@media only screen and (max-width: 750px){
+    .app_about-container {
+        padding: 80px 30px 80px 30px;
+        margin: 20px 30px 50px 30px;
+    }
+
+    .app_about-title {
+        font-size: 35px;
+    }
+
+    .app_about-img-text img {
+        width: 250px;
+        height: 120px;
+    }
+
+    .app_about-img-title-info {
+        font-size: 12px;
+    }
+    
+    .app_about-img-title-info-m {
+        font-size: 10px;
+    }
+
+    .app_about-img-line {
+        font-size: 12px;
+    }
+
+
+    
+}
+
+
+
+@media only screen and (max-width: 500px){
+    .app_about-container {
+        padding: 80px 10px 80px 10px;
+        margin: 20px 15px 50px 15px;
+    }
+
+    .app_about-title {
+        font-size: 30px;
+    }
+
+    .app_about-img-text img {
+        width: 250px;
+        height: 120px;
+    }
+
+    .app_about-img-title-info {
+        font-size: 11px;
+    }
+    
+    .app_about-img-title-info-m {
+        font-size: 9px;
+    }
+
+    .app_about-img-line {
+        font-size: 10px;
+    }
+
+    .app_about-img-container {
+        display: flex;
+        justify-content: left;
+    }
+
+}
+
+
+
+
+

@@ -1,0 +1,203 @@
+.app-signIn-container {
+    position: fixed;
+    z-index: 1050;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.app-signIn-content {
+    position: relative;
+
+    width: 100%;
+    max-width: 420px;
+    min-height: 420px;
+
+    padding: 20px 35px 35px 35px ;
+
+    border-radius: 10px;
+
+    background: white;
+}
+
+.app-signIn-closeButton {
+    background-color: white;
+    border: none;
+
+    margin-left: 350px;
+    padding-bottom: 10px;
+}
+
+.app-signIn-closeButton:hover {
+    cursor: pointer;
+}
+
+
+.app-signIn-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.app-signIn-inner h1 {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 48px;
+    color: rgb(0, 0, 0);
+    font-family: Helvetica, sans-serif;
+    letter-spacing: 0.41px;
+}
+
+.app-singIn-form label {
+    font-size: 15px;
+    font-family: 'Lucida Sans', sans-serif;
+    color: grey;
+    font-weight: 800;
+}
+
+.app-singIn-form input {
+    border: none;
+    background-color: rgb(241, 241, 241);
+    padding: 10px;
+    font-size: 15px;
+    font-family: Helvetica, sans-serif, sans-serif;
+}
+
+.app-signIn-input_number{
+    margin-bottom: 10px;
+}
+
+.app-signIn-input_number:focus,
+.app-signIn-input_password:focus {
+    border: 1px solid rgb(250, 130, 17);
+    border-color: rgb(250, 130, 17);
+    outline: none; 
+}
+
+.app-signIn-form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-singIn-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.app-signIn-submitButton {
+    font-size: 17px;
+    font-family: Helvetica, sans-serif;
+    font-weight: 800;
+    
+    margin-top: 50px;
+    padding: 15px 0px 15px 0px;
+
+    background-color: rgb(226, 225, 225);
+    border: none;
+}
+
+.app-signIn-submitButton:hover {
+    cursor: pointer;
+    background-color: rgb(250, 130, 17);
+}
+
+
+@media only screen and (max-width: 750px) {
+    .app-signIn-inner h1{
+        font-size: 37px;
+    }
+    .app-singIn-form label {
+        font-size: 14px;
+    }
+    .app-singIn-form input{
+        font-size: 14px;
+    }
+    .app-signIn-submitButton {
+        font-size: 16px;
+        
+        margin-top: 40px;
+        padding: 15px 0px 15px 0px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .app-signIn-inner h1{
+        font-size: 35px;
+    }
+    .app-singIn-form label {
+        font-size: 13px;
+    }
+    .app-singIn-form input{
+        font-size: 13px;
+    }
+    .app-signIn-submitButton {
+        font-size: 15px;
+        
+        margin-top: 35px;
+        padding: 15px 0px 15px 0px;
+    }
+
+    .app-signIn-closeButton {
+        margin-left: 315px;
+        padding-bottom: 10px;
+    }
+    
+    .app-signIn-content {
+        max-width: 375px;
+        min-height: 375px;
+    
+        padding: 20px 30px 25px 30px ;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .app-signIn-inner h1{
+        font-size: 35px;
+    }
+    .app-singIn-form label {
+        font-size: 13px;
+    }
+    .app-singIn-form input{
+        font-size: 13px;
+    }
+    .app-signIn-submitButton {
+        font-size: 15px;
+        
+        margin-top: 35px;
+        padding: 15px 0px 15px 0px;
+    }
+
+    .app-signIn-closeButton {
+        margin-left: 270px;
+        padding-bottom: 0px;
+    }
+    
+    .app-signIn-content {
+        max-width: 335px;
+        min-height: 335px;
+    
+        padding: 20px 30px 25px 30px ;
+    }
+
+    .app-singIn-form{
+        gap: 10px;
+    }
+}
+
+
+
+

@@ -1,0 +1,35 @@
+.cart-sidebar {
+    position:fixed;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    overflow-x: hidden;
+    transform: translateX(100%); 
+    transition: 0.5s ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    padding-left: 25px;
+    font-family: 'Trebuchet MS', sans-serif;
+
+    z-index: 2;
+}
+
+.cart-sidebar-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px 0 10px;
+}
+
+.cart-sidebar .button-close {
+    background-color: white;
+}
+
+
+
+.cart-sidebar.open {
+    transform: translateX(0);
+    width:300px;
+}
+

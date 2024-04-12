@@ -1,0 +1,270 @@
+.app__address-container {
+    position: fixed;
+    z-index: 1050;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.app__address-content {
+    position: relative;
+
+    width: 100%;
+    max-width: 720px;
+    min-height: 520px;
+
+    padding: 20px 35px 35px 35px ;
+
+    border-radius: 10px;
+
+    background: white;
+}
+
+.app__signIn-closeButton {
+    background-color: white;
+    border: none;
+
+    margin-left: 645px;
+    padding-bottom: 15px;
+}
+
+.app__signIn-closeButton:hover {
+    cursor: pointer;
+}
+
+.app__address-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.app__address-inner h1 {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 48px;
+    color: rgb(0, 0, 0);
+    font-family: Helvetica, sans-serif;
+    letter-spacing: 0.41px;
+}
+
+.app__address-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 25px;
+    margin: 25px 0px 135px 0px;
+}
+
+.app__address-form-additional {
+    display: flex;
+    flex-direction: row;
+}
+
+.app__address-form-additional input {
+    max-width:160px;
+
+    margin-right: 5px;
+}
+
+.app__address-form input {
+    border: none;
+    background-color: rgb(241, 241, 241);
+    padding: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    font-family: Helvetica, sans-serif, sans-serif;
+}
+
+.app__address-form input:focus {
+    border: 1px solid rgb(250, 130, 17);
+    border-color: rgb(250, 130, 17);
+    outline: none; 
+}
+.app__address-saveButton {
+    font-size: 17px;
+    font-family: Helvetica, sans-serif;
+    font-weight: 800;
+    
+    padding: 15px 0px 15px 0px;
+
+    color: white;
+
+    background-color: rgb(250, 130, 17);
+    border: none;
+}
+
+.app__address-saveButton:hover {
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .app__address-content {
+        max-width: 650px;
+    }
+    .app__signIn-closeButton {
+        margin-left: 565px;
+    }
+    .app__address-form{
+        margin-bottom: 115px;
+    }
+    .app__address-form-additional input {
+        max-width:142px;
+    }
+    .app__address-inner{
+        height: 400px;
+        padding-bottom: 0px;
+    }
+    .app__address-inner h1{
+        font-size: 37px;
+    }
+    .app__address-form input {
+        font-size: 14px;
+    }
+    .app__address-saveButton {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .app__address-content {
+        max-width: 575px;
+    }
+    .app__signIn-closeButton {
+        margin-left: 500px;
+    }
+    .app__address-form{
+        margin-bottom: 95px;
+    }
+    .app__address-form-additional input {
+        max-width:122px;
+    }
+    .app__address-inner h1{
+        font-size: 35px;
+    }
+    .app__address-form input {
+        font-size: 13px;
+    }
+    .app__address-saveButton {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .app__address-content {
+        max-width: 475px;
+        min-height: 455px;
+    }
+
+
+    .app__signIn-closeButton {
+        margin-left: 405px;
+    }
+    .app__address-form{
+        margin-bottom: 75px;
+    }
+    .app__address-form-additional input {
+        max-width:97px;
+    }
+    .app__address-inner h1{
+        font-size: 35px;
+    }
+
+}
+
+@media only screen and (max-width: 550px) {
+    .app__address-content {
+        max-width: 445px;
+        min-height: 425px;
+    }
+    .app__signIn-closeButton {
+        margin-left: 375px;
+    }
+    .app__address-form{
+        margin-bottom: 75px;
+    }
+    .app__address-form-additional input {
+        max-width:90px;
+        font-size: 12px;
+    }
+    .app__address-inner h1{
+        font-size: 34px;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .app__address-content {
+        max-width: 405px;
+        min-height: 425px;
+        
+        padding: 20px;
+    }
+    .app__signIn-closeButton {
+        margin-left: 360px;
+    }
+    .app__address-form{
+        margin-bottom: 75px;
+    }
+    .app__address-form-additional input {
+        max-width:90px;
+        font-size: 12px;
+    }
+    .app__address-form{
+        margin-bottom: 65px;
+    }
+    .app__address-inner h1{
+        font-size: 32px;
+    }
+    .app__address-saveButton{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .app__address-content {
+        max-width: 355px;
+        min-height: 315px;
+        
+        padding: 20px;
+    }
+    .app__signIn-closeButton {
+        margin-left: 310px;
+    }
+    .app__address-form{
+        margin-bottom: 75px;
+    }
+    .app__address-form-additional input {
+        max-width:148px;
+        font-size: 12px;
+    }
+    .app__address-form-additional {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    .app__address-form{
+        margin-top: 10px;
+        margin-bottom: 45px;
+    }
+}
+
+
+
+
+
+
+

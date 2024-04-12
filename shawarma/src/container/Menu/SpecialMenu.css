@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.specialMenu-container {
+    background-color: rgba(236, 226, 226, 0.301);
+    padding-bottom: 15px;
+}
+
+.specialMenu-description {
+    padding: 80px;
+    margin: 20px 75px 50px 75px;
+}
+
+.specialMenu-mainTitle {
+    font-size: 50px;
+    font-weight: 800;
+    font-family: 'montserrat', sans-serif;
+}
+
+.specialMenu-mainTitle span {
+    margin: 0;
+    padding: 0;
+    color: #ff4242;
+}
+
+.specialMenu-description-text {
+    margin-top: 25px;
+    font-family: Helvetica, sans-serif;
+    font-weight: 600;
+    color: grey;
+}
+
+.specialMenu-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 800;
+    font-family:  'montserrat', sans-serif;
+    margin-bottom: 25px;
+}
+
+.specialMenu-meal-container {
+    display: flex;
+    flex-direction: nowrap;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    scrollbar-width: none; 
+    height: 450px;
+}
+
+.meal {
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    width: 550px;
+    height: 405px;
+
+    align-items: center;
+    padding: 15px;
+    margin: 0 15px 0 15px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.centralMeal {
+    transform: scale(1.1);
+}
+
+img {
+    display: block;
+    width: 200px;
+    height: auto;
+}
+
+.meal-title-text {
+    margin-top: 10px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 20px;
+    font-family: Verdana, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.meal-description {
+    font-size: 12px;
+    font-family: 'Lucida Sans', sans-serif;
+    color: grey;
+    font-weight: 800;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.meal-price {
+    color: green;
+    font-family: Arial;
+    font-weight: 800;
+    font-size: 16px;
+    margin-top: 5px;
+
+}
+
+.specialMenu-button-basket {
+    border: none;
+    background-color: rgb(231, 230, 230);
+    padding: 10px 15px;
+    margin-top: 5px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    border-radius: 15px;
+}
+
+.specialMenu-button-basket:hover {
+    cursor: pointer;
+    background-color: rgb(250, 130, 17);
+}
+
+.specialMenu-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.specialMenu-leftright {
+    padding: 10px;
+    margin: 5px;
+    background-color: white;
+    border: 1px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.specialMenu-leftright:hover {
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1000px){
+    .specialMenu-description {
+        padding: 80px 50px 80px 50px;
+        margin: 20px 50px 50px 50px;
+    }
+
+    .specialMenu-mainTitle {
+        font-size: 40px;
+    }
+    .specialMenu-description-text {
+        font-size: 13px;
+    }
+
+    .specialMenu-title {
+        font-size: 27px;
+    }
+
+    .meal {
+        width: 475px;
+        height: 380px;
+    
+        padding: 15px;
+        margin: 0 15px 0 15px;
+    }
+
+    img {
+        width: 190px;
+        height: auto;
+    }
+
+    h2 {
+        font-size: 17px;
+    }
+
+    .meal-description {
+        font-size: 10px;
+    }
+
+    .meal-price {
+        font-size: 14px;
+    }
+
+    .specialMenu-button-basket {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .specialMenu-button-container {
+        margin-top: 12px;
+    }
+
+    .specialMenu-leftright {
+        padding: 8px;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+    .meal {
+        width: 445px;
+        height: 350px;
+    
+        padding: 15px;
+        margin: 0 10px 0 10px;
+    }
+
+    img {
+        width: 180px;
+        height: auto;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+
+    .meal-description {
+        font-size: 9px;
+    }
+
+    .meal-price {
+        font-size: 12px;
+    }
+
+    .specialMenu-button-basket {
+        padding: 6px 10px;
+        font-size: 10px;
+    }
+
+    .specialMenu-button-container {
+        margin-top: 10px;
+    }
+
+    .specialMenu-leftright {
+        padding: 7px;
+    }
+}
+
+@media only screen and (max-width: 750px){
+    .specialMenu-description {
+        padding: 80px 30px 60px 30px;
+        margin: 20px 30px 40px 30px;
+    }
+
+    .specialMenu-mainTitle {
+        font-size: 35px;
+    }
+
+    .specialMenu-title {
+        font-size: 24px;
+    }
+    
+}
+
+
+@media only screen and (max-width: 710px) {
+    .specialMenu-meal-container {
+        height: 360px;
+    }
+
+    .meal {
+        width: 405px;
+        height: 295px;
+    
+        padding: 10px;
+        margin: 0 7px 0 7px;
+    }
+
+    img {
+        width: 150px;
+        height: auto;
+    }
+
+    h2 {
+        font-size: 13px;
+    }
+
+    .meal-description {
+        font-size: 9px;
+    }
+
+    .meal-price {
+        font-size: 8px;
+    }
+
+    .specialMenu-button-basket {
+        padding: 5px 8px;
+        font-size: 8px;
+    }
+
+    .specialMenu-button-container {
+        margin-top: 8px;
+    }
+
+    .specialMenu-leftright {
+        padding: 6px;
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 500px){
+    .specialMenu-description {
+        padding: 80px 10px 60px 10px;
+        margin: 20px 15px 40px 15px;
+    }
+
+
+    .specialMenu-mainTitle {
+        font-size: 30px;
+    }
+
+    .specialMenu-title {
+        font-size: 20px;
+    }
+
+}
+
+
+
+
+
+

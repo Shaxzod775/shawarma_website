@@ -1,0 +1,159 @@
+.app__navbar {
+    width: 100%;
+    height: 100px;
+    border: 2px solid var(--color-black);
+    display: flex;
+    padding-left: 250px;
+    padding-right: 250px;
+}
+
+.app__navbar-logo {
+    justify-content: center;
+}
+
+.app__navbar-logo img {
+    width: 160px;
+    justify-content: center;
+}
+
+.app__navbar-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    list-style: none;
+}
+
+.app__navbar-links li {
+    display: flex;
+    justify-content: center;
+    padding: 0 0.4rem;
+    margin-right: 3px;
+
+    color: var(--color-black);
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.app__navbar-links li:hover {
+    color: var(--color-grey);
+    cursor: pointer;
+
+    
+}
+
+.app__navbar-buttons {
+    width: 100%;
+    flex: 1;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.app__navbar-buttons button {
+    margin-right: 1.25rem;
+    font-family: 'Trebuchet MS' ;
+}
+
+.popover-container {
+    position: relative;
+    display: inline-block; 
+  }
+
+.login_button-content{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    z-index: 3;
+    transition: all linear 0.3s;
+    font-family: Arial, sans-serif;
+}
+
+.login_button-content h4{
+    display: flex;
+    align-items: center;
+
+    transition: all linear 0.3s;
+    padding: 15px;
+    margin: 5px;
+
+    color: black;
+    font-family: Arial;
+}
+
+.login_button-content h4:hover{
+    background-color: rgb(235, 233, 233);
+    cursor: pointer;
+}
+
+.app__navbar-logo img:hover {
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 1500px) {
+    .app__navbar {
+        padding-left: 0;
+        padding-right: 0; 
+    }  
+    .login_button-content{
+        left: 0%;
+        padding: 5px;
+    }
+    
+}
+
+@media screen and (max-width: 880px) {
+    .app__navbar {
+        padding-left: 0;
+        padding-right: 0;
+        
+    }
+
+    .app__navbar-links {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .login_button-content{
+        left: 0%;
+        padding: 5px;
+        margin: 0px;
+    }
+    .login_button-content h4{
+        font-size: 12px;
+    }
+    .app__navbar {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .app__navbar-links {
+        display: none;
+    }
+
+    .app__navbar-buttons button {
+        margin: 2px;
+        padding: 11px 16px;
+    }
+
+
+    .app__navbar-buttons span {
+        display: none;
+        margin: 0;
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.app-aboutus-container {
+    height: 300px;
+    background-color: rgb(230, 229, 229);
+}
+
+.app-aboutus-contactus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.app-aboutus-contactus h2 {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 17px;
+}
+
+.app-aboutus-contactus h1 {
+    font-size: 50px;
+    font-weight: 800;
+    font-family: 'montserrat', sans-serif;
+}
+
+.app-aboutus-contactus span {
+    color: #ff4242;
+}
+
+.app-aboutus-contacts-container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.app-aboutus-contact {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    font-weight: 800;
+    font-family: 'montserrat', sans-serif;
+}
+
+
+.app-aboutus-contact button {
+    color: white;
+    font-size: 15px;
+    font-weight: 800;
+    font-family: sans-serif;
+
+    padding:15px 35px 15px 35px;
+    background-color: #e91e63;
+
+    border: none;
+    border-radius: 5px;
+
+    transition: transform 0.2s;
+}
+
+.app-aboutus-contact button:hover {
+    cursor: pointer;
+
+    transform: translateY(5px);
+
+    color: #e91e63;
+    background-color: white;
+    border: 1px solid;
+    border-color: #e91e63;
+}
+
+
+@media only screen and (max-width: 1000px){
+    .app-aboutus-contactus h1 {
+        font-size: 40px;
+    }
+
+    .app-aboutus-contactus h2 {
+        font-size: 15px;
+    }
+
+}
+
+
+@media only screen and (max-width: 750px){
+    .app-aboutus-contactus h1 {
+        font-size: 30px;
+    }
+
+    .app-aboutus-contactus h2 {
+        font-size: 13px;
+    }
+
+    .app-aboutus-address {
+        font-size: 13px;
+    }
+
+    .app-aboutus-contact button {
+        font-size: 13px;
+        padding: 10px 25px 15px 25px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .app-aboutus-container {
+        height: 225px;
+     }
+
+    .app-aboutus-address {
+        font-size: 11px;
+    }
+
+    .app-aboutus-contact button {
+        font-size: 11px;
+        padding: 8px 20px 10px 20px;
+    }
+}
+
+
+@media only screen and (max-width: 500px){
+    .app-aboutus-container {
+        height: 190px;
+     }
+
+    .app-aboutus-contactus h1 {
+        font-size: 25px;
+    }
+
+    .app-aboutus-contactus h2 {
+        font-size: 11px;
+    }
+
+    .app-aboutus-address {
+        font-size: 9px;
+    }
+
+    .app-aboutus-contact {
+        gap: 10px;
+    }
+
+    .app-aboutus-contact button {
+        font-size: 9px;
+        padding: 6px 15px 7px 15px;
+
+    }
+
+}
+
+@media only screen and (max-width: 450px){
+    .app-aboutus-contactus h1 {
+        font-size: 20px;
+    }
+
+    .app-aboutus-contactus h2 {
+        font-size: 10px;
+    }
+
+}
+
+
+
+
