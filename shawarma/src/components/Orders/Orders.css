@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.app__orders-container{
+    position: relative;
+    padding-top: 125px;
+    background-color: rgba(110, 124, 135, 0.075);
+    min-height: 100vh;
+}
+
+.app__orders-content{
+    padding: 0px 50px 50px 130px;
+}
+
+.app__orders-title {
+    font-family: "Roboto", sans-serif;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.app__orders-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 35px;
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    width: 750px;
+
+    padding: 20px 35px 20px 25px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+.order:hover{
+    cursor: pointer;
+}
+
+.order_number {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+}
+
+.order_title_button {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.order_details {
+    display:flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.order_status {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.7px;
+    background-color: rgb(231, 228, 228);
+    padding: 15px;
+    border-radius: 25px;
+}
+
+.order_status_on_the_way,
+.order_status_delivered,
+.order_status_cancelled {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.7px;
+    background-color: rgba(231, 228, 228, 0.527);
+    padding: 15px;
+    border-radius: 25px;
+}
+.order_status_on_the_way {
+    color: rgb(243, 134, 9);
+}
+
+.order_status_delivered {
+    color: rgb(48, 155, 66);
+}
+
+.order_status_cancelled {
+    color: rgb(242, 39, 28);
+}
+
+.order_date {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.7px;
+    color: grey;
+}
+
+.order_button{
+    transition: all 0.3s ease;
+}
+
+.order_button:hover{
+    transform: translateX(10px);
+    cursor: pointer;
+}
+
+.app__orders_content-empty {
+    height: 700px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+
+    font-size: 30px;
+}
+
+
+@media only screen and (max-width: 900px){
+    .app__orders-content {
+        padding: 0px 50px 50px 25px;
+    }
+    .order {
+        width: 550px;
+    }
+    .order_number {
+        font-size: 30px;
+    }
+    .order_details h4{
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 610px){
+    .app__orders-content {
+        padding: 0px 50px 50px 15px;
+    }
+    .order_number {
+        font-size: 25px;
+    }
+    .order {
+        width: 465px;
+    }
+    .order_details h4{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .app__orders-content {
+        padding: 0px 50px 50px 15px;
+    }
+    .order_number {
+        font-size: 20px;
+    }
+    .order {
+        width: 415px;
+    }
+    .order_details h4{
+        font-size: 11px;
+    }
+}
+
+

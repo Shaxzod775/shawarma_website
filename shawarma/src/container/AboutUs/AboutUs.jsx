@@ -28,11 +28,4 @@ const AboutUs = () => (
 export default AboutUs;
 
 
-// app_about-title
-// app_about-info-p-containe
-// app_about-info p1
-// app_about-info
-// app_about-img-container
-// app_about-img-text
-// app_about-img-title-info
-// app_about-img-title-info-m
+

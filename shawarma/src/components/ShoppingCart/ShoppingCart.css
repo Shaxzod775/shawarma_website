@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
 .cart-sidebar {
     position:fixed;
     right: 0;
@@ -9,17 +12,30 @@
     transform: translateX(100%); 
     transition: 0.5s ease-in-out;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    padding-left: 25px;
+    padding-left: 20px;
     font-family: 'Trebuchet MS', sans-serif;
 
-    z-index: 2;
+    z-index: 1010;
+}
+
+.cart-sidebar-content {
+    min-height: 90vh;
 }
 
 .cart-sidebar-header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+
     padding: 10px 10px 0 10px;
+}
+
+.cart-sidebar-header h2{
+    font-size: 20px;
 }
 
 .cart-sidebar .button-close {
@@ -27,9 +43,107 @@
 }
 
 
-
 .cart-sidebar.open {
     transform: translateX(0);
-    width:300px;
+    width:500px;
 }
+
+.button-deleteAll {
+    padding-left: 40vb;
+    background-color: white;
+    border: none;
+}
+
+.button-deleteAll:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+
+.item-container {
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 35px;
+
+    padding: 15px 10px 15px 15px;
+
+    background-color: rgba(110, 124, 135, 0.11);
+    gap: 25px;
+}
+
+.item-image {
+    width: 75px;
+    height: 75px;
+}
+
+.item-name-price-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.removeItem {
+    height: 65px;
+
+    color: red;
+
+    padding: 5px 10px 5px 10px;
+    background-color: none;
+    border: none;
+    border-radius: 15px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.removeItem:hover {
+    cursor: pointer;
+}
+
+.cart-sidebar-total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding-right: 25px;
+}
+
+
+.total {
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+}
+
+.total-number {
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+}
+
+.makeOrder {
+    width: 100%;
+
+    padding: 15px 5px 15px 5px;
+    border:none;
+    background-color: rgb(250, 130, 17);
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+
+    margin-top: 25px;
+}
+
+.makeOrder:hover {
+    cursor:pointer;
+}
+
+
+
 

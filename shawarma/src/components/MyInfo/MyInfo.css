@@ -1,0 +1,245 @@
+.app__myInfo-container {
+    position: fixed;
+    z-index: 1050;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.app__myInfo-content {
+    position: relative;
+
+    width: 100%;
+    max-width: 420px;
+    min-height: 420px;
+
+    padding: 20px 35px 35px 35px ;
+
+    border-radius: 10px;
+
+    background: white;
+}
+
+.app__myInfo-buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 50px;
+
+}
+
+.app__myInfo-closeButton {
+    background-color: white;
+    border: none;
+
+    margin-left: 350px;
+    padding-bottom: 10px;
+}
+
+.app__myInfo-closeButton:hover {
+    cursor: pointer;
+}
+
+
+.app__myInfo-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.app__myInfo-inner h1 {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 48px;
+    color: rgb(0, 0, 0);
+    font-family: Helvetica, sans-serif;
+    letter-spacing: 0.41px;
+}
+
+.app__myInfo-form label {
+    font-size: 15px;
+    font-family: 'Lucida Sans', sans-serif;
+    color: grey;
+    font-weight: 800;
+}
+
+.app__myInfo-form input {
+    border: none;
+    background-color: rgb(241, 241, 241);
+    padding: 10px;
+    font-size: 15px;
+    font-family: Helvetica, sans-serif, sans-serif;
+}
+
+.app__myInfo-input_fullname{
+    margin-bottom: 10px;
+}
+
+.app__myInfo-input_fullname:focus,
+.app__myInfo-input_address:focus {
+    border: 1px solid rgb(250, 130, 17);
+    border-color: rgb(250, 130, 17);
+    outline: none; 
+}
+
+.app__myInfo-form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.app__myInfo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.app__myInfo-saveButton {
+    font-size: 17px;
+    font-family: Helvetica, sans-serif;
+    font-weight: 800;
+    
+    margin-top: 50px;
+    padding: 15px 10px 15px 10px;
+
+    background-color: rgb(226, 225, 225);
+    border: none;
+}
+
+.app__myInfo-saveButton:hover {
+    cursor: pointer;
+    color: rgb(226, 225, 225);
+    background-color: rgb(250, 130, 17);
+}
+
+.app__myInfo-cancelButton {
+    font-size: 17px;
+    font-family: Helvetica, sans-serif;
+    font-weight: 800;
+    
+    margin-top: 50px;
+    padding: 15px 10px 15px 10px;
+
+    color: rgb(240, 237, 237);
+    background-color: rgb(248, 9, 9);
+    border: none;
+}
+
+.app__myInfo-cancelButton:hover {
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 750px) {
+    .app__myInfo-inner h1{
+        font-size: 37px;
+    }
+    .app__myInfo-form label {
+        font-size: 14px;
+    }
+    .app__myInfo-form input{
+        font-size: 14px;
+    }
+    .app__myInfo-saveButton  {
+        font-size: 16px;
+        
+        margin-top: 40px;
+        padding: 15px 10px 15px 10px;
+    }
+    .app__myInfo-cancelButton  {
+        font-size: 16px;
+        
+        margin-top: 40px;
+        padding: 15px 10px 15px 10px;
+    }
+
+}
+
+@media only screen and (max-width: 520px) {
+    .app__myInfo-inner h1{
+        font-size: 35px;
+    }
+    .app__myInfo-form label {
+        font-size: 13px;
+    }
+    .app__myInfo-form input{
+        font-size: 13px;
+    }
+    .app__myInfo-saveButton {
+        font-size: 15px;
+        
+        margin-top: 35px;
+        padding: 15px 10px 15px 10px;
+    }
+    .app__myInfo-cancelButton {
+        font-size: 15px;
+        
+        margin-top: 35px;
+        padding: 15px 10px 15px 10px;
+    }
+
+    .app__myInfo-closeButton {
+        margin-left: 315px;
+        padding-bottom: 10px;
+    }
+    
+    .app__myInfo-content {
+        max-width: 375px;
+        min-height: 375px;
+    
+        padding: 20px 30px 25px 30px ;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .app__myInfo-inner h1{
+        font-size: 35px;
+    }
+    .app__myInfo-form label {
+        font-size: 13px;
+    }
+    .app__myInfo-form input{
+        font-size: 13px;
+    }
+    .app__myInfo-saveButton {
+        font-size: 15px;
+        
+        margin-top: 35px;
+        padding: 15px 10px 15px 10px;
+    }
+    .app__myInfo-cancelButton {
+        font-size: 15px;
+        
+        margin-top: 35px;
+        padding: 15px 10px 15px 10px;
+    }
+
+    .app__myInfo-closeButton {
+        margin-left: 270px;
+        padding-bottom: 0px;
+    }
+    
+    .app__myInfo-content {
+        max-width: 335px;
+        min-height: 335px;
+    
+        padding: 20px 30px 25px 30px ;
+    }
+
+    .app__myInfo-form{
+        gap: 10px;
+    }
+}

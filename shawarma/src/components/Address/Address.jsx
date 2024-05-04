@@ -1,49 +1,63 @@
 import React, { useEffect, useState } from 'react';
 import { IoMdClose } from "react-icons/io";
+import axios  from 'axios';
 import './Address.css';
 
+
 const AddressModal = ({ isOpen, onClose }) => {
+  const [message, setMessage] = useState('');
   const [formValues, setFormValues] = useState({
     address: '',
-    office: '',
+    apartment: '',
     intercom: '',
     entrance: '',
     floor: '',
     comments: ''
   });
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
+  const handleInputChange = (event) => {
+    const { id, value } = event.target;
     setFormValues(prevState => ({
       ...prevState,
-      [name]: value
+      [id]: value
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault(); 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const token = localStorage.getItem('access');
+
+    const config = {
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json'
+      }
+    };
 
     try {
-      const response = await fetch('/api/address', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formValues),
-      });
+      const response = await axios.post('http://127.0.0.1:8000/api/accounts/user/address/', formValues, config); 
+      if (response.data.message === 'Адрес добавлен успешно!') {
+        setMessage(response.data.message);
 
-      if (response.ok) {
-        console.log('Address saved successfully');
-        onClose(); 
-      } else {
-        console.error('Failed to save address');
+
       }
     } catch (error) {
-      // Handle network errors
-      console.error('Error:', error);
+      if (error.response) {
+        setMessage(token)
+      } else {
+        setMessage("An error occurred");
+        console.error("An unknown error occurred:", error);
+      }
     }
-  };
+  }
 
+  useEffect(() => {
+    if (message === 'Адрес добавлен успешно!') {
+      onClose();
+      window.location.reload()
+    }
+  }, [message, onClose]);
 
   useEffect(() => {
     const handleCloseOnClickOutside = (event) => {
@@ -72,16 +86,18 @@ const AddressModal = ({ isOpen, onClose }) => {
             <div className='app__address-inner'> 
             <h1>Адрес доставки</h1>
             <form onSubmit={handleSubmit} className='app__address-form'>
-              <input name="address" type="text" placeholder='Адрес' onChange={handleInputChange}/>
+              <input id="address" type="text" placeholder='Адрес' value={formValues.address} onChange={handleInputChange} required/>
               <div className='app__address-form-additional'>
-                <input name="office" type="text" placeholder='Кв./офис' onChange={handleInputChange}/>
-                <input name="intercom" type="text" placeholder='Домофон' onChange={handleInputChange}/>
-                <input name="entrance" type="text" placeholder='Подъезд' onChange={handleInputChange}/>
-                <input name="floor" type="text" placeholder='Этаж' onChange={handleInputChange}/>
+                <input id="apartment" type="text" placeholder='Кв./офис' value={formValues.apartment} onChange={handleInputChange} required/>
+                <input id="intercom" type="text" placeholder='Домофон' value={formValues.intercom} onChange={handleInputChange} required/>
+                <input id="entrance" className='app__address-inputNumber' type="number" placeholder='Подъезд' value={formValues.entrance} onChange={handleInputChange} required/>
+                <input id="floor" type="number" placeholder='Этаж' value={formValues.floor} onChange={handleInputChange} required/>
               </div>
-              <input name="comments" type="text" placeholder='Комментарии' onChange={handleInputChange}/>
+              <input id="comments" type="text" placeholder='Комментарии' value={formValues.comments} onChange={handleInputChange}/>
+              
+              {message && <p>{message}</p>}
+              <button type='submit' className='app__address-saveButton'>Сохранить</button>
             </form>
-            <button type='submit' className='app__address-saveButton'>Сохранить</button>
             </div>
         </div> 
     </div>

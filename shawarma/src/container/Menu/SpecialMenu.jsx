@@ -1,15 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { images } from '../../constants';
+import { useCart } from '../../components/context/CartContext';
 import './SpecialMenu.css';
 
 const SpecialMenu = () => {
   const meals = [
-    { name: 'Кремовая миска с травами', image: images.meal3, description: 'Сумах/паприка, оливковое масло и зелень', price: '80 000 сум' },
-    { name: 'Тушеные бобы с укропом', image: images.meal5, description: 'Бобы, злаки, специи, свежие овощи', price: '60 000 сум' },
-    { name: 'Салат из овощей и пюре', image: images.meal4, description: 'Нарезанные овощи с травами, хлебом, заправкой', price: '40 000 сум' },
-    { name: 'Острая рисовая миска c яйцом', image: images.meal7, description: 'Рис на томате, овощи, белок, яйца, лук', price: '33 000 сум' },
-    { name: 'Фаршированный пита-сэндвич', image: images.meal1, description: ' Мясо, овощи, цацики/тахини с секретным соусом', price: '21 000 сум' },
-    { name: 'Средиземноморская тарелка', image: images.meal2, description: 'Жареные овощи, белки, хумус, травы и добавки', price: '120 000 сум' },
+    {id: 1, name: 'Кремовая миска с травами', image: images.meal3, description: 'Сумах/паприка, оливковое масло и зелень', price: '80 000 сум' },
+    {id: 2, name: 'Тушеные бобы с укропом', image: images.meal5, description: 'Бобы, злаки, специи, свежие овощи', price: '60 000 сум' },
+    {id: 3, name: 'Салат из овощей и пюре', image: images.meal4, description: 'Нарезанные овощи с травами, хлебом, заправкой', price: '40 000 сум' },
+    {id: 4, name: 'Острая рисовая миска c яйцом', image: images.meal7, description: 'Рис на томате, овощи, белок, яйца, лук', price: '33 000 сум' },
+    {id: 5, name: 'Фаршированный пита-сэндвич', image: images.meal1, description: ' Мясо, овощи, цацики/тахини с секретным соусом', price: '21 000 сум' },
+    {id: 6, name: 'Средиземноморская тарелка', image: images.meal2, description: 'Жареные овощи, белки, хумус, травы и добавки', price: '120 000 сум' },
   ];
 
   const loopedMeals = [meals[meals.length - 1], ...meals, meals[0]];
@@ -17,6 +18,8 @@ const SpecialMenu = () => {
   const middleIndex = Math.floor(meals.length / 2);
   const [currentMealIndex, setCurrentMealIndex] = useState(middleIndex);
   const scrollRef = useRef(null);
+  
+  const { addToCart} = useCart();
 
 
   const scrollToMeal = (index) => {
@@ -33,6 +36,15 @@ const SpecialMenu = () => {
       behavior: 'smooth'
     });
   };
+
+  const handleClickAdd = (mealName) => {
+    const mealToAdd = meals.find(meal => meal.name === mealName);
+    if (mealToAdd) {
+      addToCart(mealToAdd);
+    } else {
+      console.error("Meal not found: ", mealName);
+    }
+  }
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -77,6 +89,8 @@ const SpecialMenu = () => {
   }
 
 
+
+
   return (
   <div id="SpecialMenu" className='specialMenu-container'>
     <div className='specialMenu-description'>
@@ -94,7 +108,7 @@ const SpecialMenu = () => {
             <h2>{meal.name}</h2>
             <p className='meal-description'>{meal.description}</p>
             <p className='meal-price'>{meal.price}</p>
-            <button className='specialMenu-button-basket'>В Корзину</button>
+            <button className='specialMenu-button-basket' onClick={() => handleClickAdd(meal.name)}>В Корзину</button>
           </div>
         </div>
       ))}

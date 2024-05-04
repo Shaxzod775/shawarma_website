@@ -115,6 +115,10 @@
     background-color: rgb(250, 130, 17);
 }
 
+.app-signIn-signUpButton:hover{
+    cursor:pointer;
+}
+
 
 @media only screen and (max-width: 750px) {
     .app-signIn-inner h1{

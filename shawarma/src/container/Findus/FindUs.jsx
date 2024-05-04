@@ -10,15 +10,15 @@ const FindUs = () => (
     <div className='app-aboutus-contacts-container'>
         <div className='app-aboutus-contact'>
           <h4 className='app-aboutus-address'>Amir Temur Avenue</h4>
-          <button className='app-aboutus-number'>(95) 694-94-48</button>
+          <button className='app-aboutus-number' onClick={() => window.location.href = 'tel:tel:+998956949448'}>(95) 694-94-48</button>
         </div>
         <div className='app-aboutus-contact'>
           <h4 className='app-aboutus-address'>Beruni Avenue</h4>
-          <button className='app-aboutus-number'>(98) 609-05-59</button>
+          <button className='app-aboutus-number' onClick={() => window.location.href = 'tel:+998986090559'}>(98) 609-05-59</button>
         </div>
         <div className='app-aboutus-contact'>
           <h4 className='app-aboutus-address'>Little Ring Road 8</h4>
-          <button className='app-aboutus-number'>(91) 443-62-26</button>
+          <button className='app-aboutus-number' onClick={() => window.location.href = 'tel:+998914436226'}>(91) 443-62-26</button>
         </div>
     </div>
     <div className='app-aboutus-location-container'>
