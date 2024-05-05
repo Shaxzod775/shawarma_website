@@ -94,7 +94,6 @@ const AddressModal = ({ isOpen, onClose }) => {
                 <input id="floor" type="number" placeholder='Этаж' value={formValues.floor} onChange={handleInputChange} required/>
               </div>
               <input id="comments" type="text" placeholder='Комментарии' value={formValues.comments} onChange={handleInputChange}/>
-              
               {message && <p>{message}</p>}
               <button type='submit' className='app__address-saveButton'>Сохранить</button>
             </form>

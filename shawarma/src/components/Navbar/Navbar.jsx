@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { images } from '../../constants';
 import { MdShoppingBasket } from 'react-icons/md';
@@ -10,17 +10,23 @@ import { Link } from 'react-scroll';
 import { useAuth } from '../context/AuthContext';
 import { IoFastFoodOutline } from 'react-icons/io5';
 import { useNavigate } from 'react-router-dom';
+import { PiExclamationMarkFill } from "react-icons/pi";
 import './Navbar.css'
 
 
 const Navbar = ({ onSignInClick, onAddressClick, onMyInfoClick }) => {
-  const { toggleCartVisibility } = useCart();
-  const { userLoggedIn} = useAuth();
+  const { toggleCartVisibility, cartItems } = useCart();
+  const { userLoggedIn } = useAuth();
+  const [exclamationVisible, setExlamationVisible] = useState(false);
   const navigate = useNavigate();
 
   const goHome= () => {
     navigate('/');
   }
+
+  useEffect(() => {
+    setExlamationVisible(true)
+  }, [cartItems])
 
   return (
     <nav className="app__navbar">
@@ -36,7 +42,7 @@ const Navbar = ({ onSignInClick, onAddressClick, onMyInfoClick }) => {
       
       <div className="app__navbar-buttons">
         {userLoggedIn && <button className="custom__button" onClick={onAddressClick}><MdLocationOn style={{ marginRight: '6px' }}/><span>Укажите ад...</span></button>}
-        <button className="custom__button" onClick={toggleCartVisibility}><MdShoppingBasket style={{ marginRight: '6px' }}/><span>Корзина</span></button>
+        <button className="basket-button" onClick={toggleCartVisibility}> {cartItems && cartItems.length > 0 && <PiExclamationMarkFill className={`exclamation-mark ${exclamationVisible ? 'open' : ''}`} />}<MdShoppingBasket className='shopping-basket'/><span>Корзина</span></button>
         <PopoverButton onSignInClick={onSignInClick} onMyInfoClick={onMyInfoClick}/>
       </div>
 

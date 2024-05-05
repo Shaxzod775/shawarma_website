@@ -40,10 +40,7 @@
 }
 
 .app__navbar-links li:hover {
-    color: var(--color-grey);
     cursor: pointer;
-
-    
 }
 
 .app__navbar-buttons {
@@ -57,13 +54,42 @@
 
 .app__navbar-buttons button {
     margin-right: 1.25rem;
-    font-family: 'Trebuchet MS' ;
+    font-family: 'Trebuchet MS';
+}
+
+.basket-button {
+    border: none;
+    font-family: 'Trebuchet MS';
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 28px;
+    font-size: 16px;
+    width: 150px;
+    height: 50px;
+}
+
+
+.basket-button:hover {
+    cursor:pointer;
+}
+
+.shopping-basket {
+    margin-right: 4px;
+}
+
+.exclamation-mark {
+    position: relative;
+    left: 5%;
+    z-index: 1000;
+    width: 10px;
+    height: 10px;
+    color:red;
 }
 
 .popover-container {
     position: relative;
     display: inline-block; 
-  }
+}
 
 .login_button-content{
     position: absolute;
@@ -98,6 +124,7 @@
 .app__navbar-logo img:hover {
     cursor: pointer;
 }
+
 
 
 

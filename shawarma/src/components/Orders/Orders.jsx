@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { format, parseISO } from 'date-fns';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -21,7 +20,6 @@ const Orders = () => {
       const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'};
       return new Date(dateString).toLocaleDateString('ru-Ru', options);
     };
-    
 
     const config = {
       headers : {
@@ -32,12 +30,13 @@ const Orders = () => {
 
     try {
       const response = await axios.get('http://127.0.0.1:8000/api/orders/order/', config);  
-      const ordersData = response.data.map(order => ({
+      let ordersData = response.data.map(order => ({
         orderNumber: order.id,              
         orderStatus: order.order_status,    
         orderDate: formatDate(order.ordered_at),       
       }));
 
+      ordersData = ordersData.sort((a, b) => b.orderNumber - a.orderNumber);
       setOrders(ordersData);
       console.log(ordersData)
     } catch (error) {

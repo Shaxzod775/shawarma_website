@@ -16,6 +16,7 @@
     font-family: 'Trebuchet MS', sans-serif;
 
     z-index: 1010;
+    scrollbar-width: none; 
 }
 
 .cart-sidebar-content {

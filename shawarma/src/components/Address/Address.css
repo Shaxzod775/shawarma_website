@@ -24,7 +24,7 @@
 
     width: 100%;
     max-width: 720px;
-    min-height: 520px;
+    min-height: 350px;
 
     padding: 20px 35px 35px 35px ;
 
@@ -65,7 +65,7 @@
     flex-direction: column;
 
     gap: 25px;
-    margin: 25px 0px 135px 0px;
+    margin: 25px 0px 50px 0px;
 }
 
 .app__address-form-additional {
@@ -93,6 +93,7 @@
     border-color: rgb(250, 130, 17);
     outline: none; 
 }
+
 .app__address-saveButton {
     font-size: 17px;
     font-family: Helvetica, sans-serif;
