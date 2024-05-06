@@ -5,7 +5,7 @@ from .models import Customer, CustomerAddress, CustomerFullname
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = Customer
-        fields = ['phone', 'password']
+        fields = ['id', 'phone', 'password']
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):

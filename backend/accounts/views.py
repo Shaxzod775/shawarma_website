@@ -33,6 +33,7 @@ class LoginUserView(generics.GenericAPIView):
         user = authenticate(phone=phone, password=password)
         if user: 
             return Response({
+                "id": user.id,
                 "phone": user.phone,
                 "message": "User logged in successfully."
             })

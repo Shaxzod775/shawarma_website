@@ -105,8 +105,6 @@ const OrderDetail = () => {
     getPhoneNumber()
   }, []);
 
-// order-deliveryCost, meal-name, meal-total-cost, order-totalCost, order-totalCost-number, order-client, order-client-fullname, order-address, order-address-info, order-phone, order-phone-info
-
 
   return (
     <div className='app__orderDetails-container'>

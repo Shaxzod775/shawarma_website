@@ -72,10 +72,7 @@ export const AuthProvider = ({ children }) => {
 
 
     const logoutUser = () => {
-        localStorage.removeItem('loggedIn');
-        localStorage.removeItem('access');
-        localStorage.removeItem('refresh');
-        localStorage.removeItem('phone')
+        localStorage.clear();
         setUserLoggedIn(false);
         window.location.reload()
     };

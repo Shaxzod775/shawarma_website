@@ -33,13 +33,13 @@
     padding: 0 0.4rem;
     margin-right: 3px;
 
-    color: var(--color-black);
     font-size: 15px;
     font-weight: 600;
     font-family: 'Trebuchet MS', sans-serif;
 }
 
 .app__navbar-links li:hover {
+    color: rgba(128, 128, 128, 0.822);
     cursor: pointer;
 }
 

@@ -52,8 +52,10 @@ const ShoppingCart = () => {
             quantity: item.quantity
         }));
 
+        const customerId = localStorage.getItem('customer')
+
         const body = {
-            customer: 1,  
+            customer: customerId,  
             delivery_cost: 10000,
             order_status: "on_the_way",
             order_items: orderItems 

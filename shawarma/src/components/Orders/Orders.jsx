@@ -38,7 +38,6 @@ const Orders = () => {
 
       ordersData = ordersData.sort((a, b) => b.orderNumber - a.orderNumber);
       setOrders(ordersData);
-      console.log(ordersData)
     } catch (error) {
       console.error('Failed to fetch orders:', error);
       setMessage('Failed to load orders.');

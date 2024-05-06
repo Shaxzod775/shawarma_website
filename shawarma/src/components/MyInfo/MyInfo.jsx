@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { IoMdClose } from "react-icons/io";
-import { useAuth } from '../context/AuthContext';
 import axios  from 'axios';
 import './MyInfo.css';
 

@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useState } from 'react';
-import { images } from '../../constants';
 
 const CartContext = createContext();
 

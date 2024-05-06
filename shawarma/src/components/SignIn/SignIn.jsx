@@ -28,6 +28,7 @@ const SignInModal = ({ isOpen, onClose, onSignUpClick }) => {
       });
         setMessage(response.data.message);
         localStorage.setItem('phone', formData.phoneNumber)
+        localStorage.setItem('customer', response.data.id)
         if (message === 'User logged in successfully.') {
         }
       } catch (error) {
