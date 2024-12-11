@@ -7,7 +7,7 @@ import { Navbar } from './components';
 import { ShoppingCart } from './components'
 import { AuthProvider } from './components/context/AuthContext';
 import SignInModal from './components/SignIn/SignIn';
-import AddressModal from './components/Address/address';
+import AddressModal from './components/Address/Address';
 import SignUpModal from './components/SignUp/SignUp';
 import MyInfoModal from './components/MyInfo/MyInfo';
 import Orders from './components/Orders/Orders';
