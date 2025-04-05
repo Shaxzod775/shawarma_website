@@ -41,7 +41,7 @@ export const AuthProvider = ({ children }) => {
         };
     
         try {
-            const responseToken = await axios.post('http://localhost:8000/api/accounts/token/', body, config);
+            const responseToken = await axios.post('http://34.60.112.89:8000/api/accounts/token/', body, config);
     
             const access_token = responseToken.data.access;
             const refresh_token = responseToken.data.refresh;

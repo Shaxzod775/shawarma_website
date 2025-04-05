@@ -36,7 +36,7 @@ const AddressModal = ({ isOpen, onClose }) => {
     };
 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/accounts/user/address/', formValues, config); 
+      const response = await axios.post('http://34.60.112.89:8000/api/accounts/user/address/', formValues, config); 
       if (response.data.message === 'Адрес добавлен успешно!') {
         setMessage(response.data.message);
 

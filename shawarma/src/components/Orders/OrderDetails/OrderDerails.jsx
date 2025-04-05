@@ -30,7 +30,7 @@ const OrderDetail = () => {
     }
 
     try {
-      const response = await axios.get('http://127.0.0.1:8000/api/orders/order/', config);  
+      const response = await axios.get('http://34.60.112.89:8000/api/orders/order/', config);  
       const ordersData = response.data.map(order => ({
         orderNumber: order.id,
         orderDeliveryCost: order.delivery_cost,
@@ -66,7 +66,7 @@ const OrderDetail = () => {
     } 
     
     try {
-      const responseAddress = await axios.get('http://127.0.0.1:8000/api/accounts/user/address/', config);
+      const responseAddress = await axios.get('http://34.60.112.89:8000/api/accounts/user/address/', config);
       setAddress(responseAddress.data[0].address)
     } catch (error) {
       setMessage(error || "An error occured")
@@ -84,7 +84,7 @@ const OrderDetail = () => {
     } 
     
     try {
-      const responseFullname = await axios.get('http://127.0.0.1:8000/api/accounts/user/fullname/', config);
+      const responseFullname = await axios.get('http://34.60.112.89:8000/api/accounts/user/fullname/', config);
       setFullname(responseFullname.data.fullname)
     } catch (error) {
       setMessage(error || "An error occured")

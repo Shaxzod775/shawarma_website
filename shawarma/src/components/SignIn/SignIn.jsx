@@ -22,7 +22,7 @@ const SignInModal = ({ isOpen, onClose, onSignUpClick }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/api/accounts/login/', {
+      const response = await axios.post('http://34.60.112.89:8000/api/accounts/login/', {
         phone:formData.phoneNumber,
         password: formData.password
       });

@@ -46,15 +46,15 @@ const MyInfoModal = ({ isOpen, onClose }) => {
             }
     
             if (!fullname.trim() && formData.fullname.trim()) {
-                await axios.post('http://127.0.0.1:8000/api/accounts/user/fullname/', bodyFullname, config);
+                await axios.post('http://34.60.112.89:8000/api/accounts/user/fullname/', bodyFullname, config);
             } else if (formData.fullname !== fullname) {
-                await axios.put('http://127.0.0.1:8000/api/accounts/user/fullname/', bodyFullname, config);
+                await axios.put('http://34.60.112.89:8000/api/accounts/user/fullname/', bodyFullname, config);
             }
     
             if (!address.trim() && formData.address.trim()) {
-                await axios.post('http://127.0.0.1:8000/api/accounts/user/address/', bodyAdress, config);
+                await axios.post('http://34.60.112.89:8000/api/accounts/user/address/', bodyAdress, config);
             } else if (formData.address !== address) {
-                await axios.post('http://127.0.0.1:8000/api/accounts/user/address/', bodyAdress, config);
+                await axios.post('http://34.60.112.89:8000/api/accounts/user/address/', bodyAdress, config);
             }
     
             setMessage('User information updated successfully');
@@ -78,7 +78,7 @@ const MyInfoModal = ({ isOpen, onClose }) => {
         }
       };
       try {
-        const response = await axios.get('http://127.0.0.1:8000/api/accounts/user/address/', config);
+        const response = await axios.get('http://34.60.112.89:8000/api/accounts/user/address/', config);
         const addressData = response.data[0]?.address ?? '';
         setAddress(addressData);
         setFormData(prevState => ({
@@ -100,7 +100,7 @@ const MyInfoModal = ({ isOpen, onClose }) => {
         }
       };
       try {
-        const response = await axios.get('http://127.0.0.1:8000/api/accounts/user/fullname/', config);
+        const response = await axios.get('http://34.60.112.89:8000/api/accounts/user/fullname/', config);
         const fullnameData = response.data?.fullname ?? '';
         setFullname(fullnameData);
         setFormData(prevState => ({

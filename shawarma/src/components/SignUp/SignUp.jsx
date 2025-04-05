@@ -21,14 +21,14 @@ const SignUpModal = ({ isOpen, onClose }) => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-          const response = await axios.post('http://localhost:8000/api/accounts/register/', {
+          const response = await axios.post('http://34.60.112.89:8000/api/accounts/register/', {
             phone:formData.phoneNumber,
             password:formData.password
           });
           setMessage(response.data.message);
           if (message === 'User logged in successfully.') {
             
-            const response_token = await axios.post('http://localhost:8000/api/accounts/token/', {
+            const response_token = await axios.post('http://34.60.112.89:8000/api/accounts/token/', {
               phone:formData.phoneNumber,
               password:formData.password
             });

@@ -29,7 +29,7 @@ const Orders = () => {
     }
 
     try {
-      const response = await axios.get('http://127.0.0.1:8000/api/orders/order/', config);  
+      const response = await axios.get('http://34.60.112.89:8000/api/orders/order/', config);  
       let ordersData = response.data.map(order => ({
         orderNumber: order.id,              
         orderStatus: order.order_status,    

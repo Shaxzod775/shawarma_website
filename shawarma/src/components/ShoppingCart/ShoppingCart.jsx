@@ -62,7 +62,7 @@ const ShoppingCart = () => {
         };
         
         try {
-            const response = await axios.post('http://127.0.0.1:8000/api/orders/order/', body, config);
+            const response = await axios.post('http://34.60.112.89:8000/api/orders/order/', body, config);
             console.log(response.data.message); 
             if (response.data.message === 'Ваш заказ принят!') {
                 toggleCartVisibility();
